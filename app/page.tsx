@@ -1,6 +1,9 @@
 'use client'
 
 import Navigation from '@/components/Navigation'
+import KeywordDataTabs from '@/components/KeywordDataTabs'
+import YouTubeVideo from '@/components/YouTubeVideo'
+import KyleCampbellSection from '@/components/KyleCampbellSection'
 import Link from 'next/link'
 import { ArrowRight, TrendingUp, Users, Target, Zap, CheckCircle, Star } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -49,6 +52,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Keyword Data Tables */}
+      <KeywordDataTabs />
+
+      {/* YouTube Video */}
+      <YouTubeVideo />
+
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -80,6 +89,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Kyle Campbell Section */}
+      <KyleCampbellSection />
 
       {/* CTA Section */}
       <section className="py-20 px-4">
