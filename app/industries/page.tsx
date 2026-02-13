@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation'
 import { motion } from 'framer-motion'
 import { Bug, Droplets, Zap, Home, Wrench, Building, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Services() {
   const services = [
@@ -83,8 +84,19 @@ export default function Services() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="glass-effect rounded-xl p-8 hover:scale-105 transition-transform"
               >
-                <div className={`inline-block p-3 rounded-lg bg-gradient-to-r ${service.color} mb-4`}>
-                  {service.icon}
+                <div className="flex items-center gap-4 mb-4">
+                  <div className={`inline-block p-3 rounded-lg bg-gradient-to-r ${service.color}`}>
+                    {service.icon}
+                  </div>
+                  {index === 0 && (
+                    <Image 
+                      src="/pest-control-ants.png" 
+                      alt="Pest Control Ants"
+                      width={80}
+                      height={80}
+                      className="rounded-lg object-cover"
+                    />
+                  )}
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
