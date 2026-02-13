@@ -278,6 +278,9 @@ export default function KeywordDataTabs() {
   return (
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 gradient-text">
+          Keyword Types We Target
+        </h2>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
