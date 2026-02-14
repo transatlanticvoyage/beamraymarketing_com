@@ -95,7 +95,7 @@ export default function LeadNurturingPost() {
                   <h3 className="text-xl font-semibold mb-4 text-green-400">Conversion Impact:</h3>
                   <ul className="space-y-2 text-gray-300">
                     <li>• 7x more likely to qualify leads in first hour</li>
-                    <li>• 60% higher close rate with <5 min response</li>
+                    <li>• 60% higher close rate with &lt;5 min response</li>
                     <li>• 391% more conversions with immediate follow-up</li>
                     <li>• Average deal size 23% larger with fast response</li>
                   </ul>

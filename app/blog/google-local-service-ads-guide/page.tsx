@@ -189,7 +189,7 @@ export default function GoogleLSAPost() {
                       <li>• Major Metro (1M+): $700-1,500/week</li>
                       <li>• Large City (500K-1M): $500-900/week</li>
                       <li>• Mid-Size (100-500K): $300-600/week</li>
-                      <li>• Small Market (<100K): $150-400/week</li>
+                      <li>• Small Market (&lt;100K): $150-400/week</li>
                     </ul>
                   </div>
                   <p className="text-gray-300">
