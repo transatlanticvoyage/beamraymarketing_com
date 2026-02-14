@@ -26,6 +26,56 @@ const blogPosts: BlogPost[] = [
     readTime: '8 min read',
     category: 'Local SEO',
     featured: true
+  },
+  {
+    slug: 'facebook-ads-service-businesses',
+    title: 'The $500 Facebook Ads Strategy That Generated 47 Leads for a Local Plumber',
+    excerpt: 'Learn the exact Facebook advertising framework we use to generate qualified leads for home service businesses without wasting money on tire kickers.',
+    date: 'February 9, 2024',
+    author: 'Kyle Campbell',
+    readTime: '10 min read',
+    category: 'Paid Advertising',
+    featured: false
+  },
+  {
+    slug: 'google-local-service-ads-guide',
+    title: 'Google Local Service Ads: The Secret Weapon Your Competitors Don\'t Want You to Know',
+    excerpt: 'How to dominate the space above Google Maps with Local Service Ads. Complete setup guide, optimization tips, and real ROI data from 50+ campaigns.',
+    date: 'February 5, 2024',
+    author: 'Kyle Campbell',
+    readTime: '12 min read',
+    category: 'Google Ads',
+    featured: false
+  },
+  {
+    slug: 'review-management-automation',
+    title: 'How to Get 5-Star Reviews on Autopilot (Without Being Sleazy)',
+    excerpt: 'The ethical review generation system that helped our clients average 4.8 stars and double their monthly review count in just 60 days.',
+    date: 'January 31, 2024',
+    author: 'Kyle Campbell',
+    readTime: '7 min read',
+    category: 'Reputation Management',
+    featured: false
+  },
+  {
+    slug: 'lead-nurturing-home-services',
+    title: 'Why 67% of Your Leads Never Convert (And the Simple Fix)',
+    excerpt: 'Most service businesses lose leads through poor follow-up. Here\'s the automated nurturing sequence that converts cold leads into booked appointments.',
+    date: 'January 26, 2024',
+    author: 'Kyle Campbell',
+    readTime: '9 min read',
+    category: 'Lead Generation',
+    featured: false
+  },
+  {
+    slug: 'competitor-keyword-research',
+    title: 'Steal Your Competitors\' Best Keywords in 15 Minutes',
+    excerpt: 'The step-by-step process for uncovering exactly which keywords drive your competitors\' traffic and how to outrank them within 90 days.',
+    date: 'January 22, 2024',
+    author: 'Kyle Campbell',
+    readTime: '6 min read',
+    category: 'Local SEO',
+    featured: false
   }
 ]
 
@@ -52,19 +102,21 @@ export default function Blog() {
             </p>
           </motion.div>
 
-          {/* Featured Post */}
-          {blogPosts.filter(post => post.featured).map((post, index) => (
+          {/* Blog Posts */}
+          {blogPosts.map((post, index) => (
             <motion.div
               key={post.slug}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="glass-effect rounded-2xl p-8 mb-12"
+              className="glass-effect rounded-2xl p-8 mb-8"
             >
               <div className="flex items-center gap-2 mb-4">
-                <span className="px-3 py-1 bg-gradient-to-r from-beamray-blue to-beamray-green text-white text-sm rounded-full font-semibold">
-                  Featured Post
-                </span>
+                {post.featured && (
+                  <span className="px-3 py-1 bg-gradient-to-r from-beamray-blue to-beamray-green text-white text-sm rounded-full font-semibold">
+                    Featured Post
+                  </span>
+                )}
                 <span className="px-3 py-1 bg-white/10 text-gray-400 text-sm rounded-full">
                   {post.category}
                 </span>
@@ -116,10 +168,10 @@ export default function Blog() {
             <h2 className="text-2xl font-bold mb-6">Browse by Category</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { icon: <TrendingUp />, name: 'Local SEO', count: 1 },
-                { icon: <Target />, name: 'Google Ads', count: 0 },
-                { icon: <Zap />, name: 'Lead Generation', count: 0 },
-                { icon: <User />, name: 'Case Studies', count: 0 }
+                { icon: <TrendingUp />, name: 'Local SEO', count: 2 },
+                { icon: <Target />, name: 'Google Ads', count: 1 },
+                { icon: <Zap />, name: 'Lead Generation', count: 1 },
+                { icon: <User />, name: 'Paid Advertising', count: 1 }
               ].map((category, index) => (
                 <motion.div
                   key={category.name}
