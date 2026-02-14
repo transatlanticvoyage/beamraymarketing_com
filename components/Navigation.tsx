@@ -22,6 +22,7 @@ export default function Navigation() {
             <Link href="/services" className="hover:text-beamray-blue transition-colors">Services</Link>
             <Link href="/industries" className="hover:text-beamray-blue transition-colors">Industries</Link>
             <Link href="/portfolio" className="hover:text-beamray-blue transition-colors">Portfolio</Link>
+            <Link href="/blog" className="hover:text-beamray-blue transition-colors">Blog</Link>
             <Link href="/contact" className="hover:text-beamray-blue transition-colors">Contact</Link>
           </div>
           
@@ -43,6 +44,7 @@ export default function Navigation() {
               <Link href="/services" className="hover:text-beamray-blue transition-colors" onClick={() => setIsOpen(false)}>Services</Link>
               <Link href="/industries" className="hover:text-beamray-blue transition-colors" onClick={() => setIsOpen(false)}>Industries</Link>
               <Link href="/portfolio" className="hover:text-beamray-blue transition-colors" onClick={() => setIsOpen(false)}>Portfolio</Link>
+              <Link href="/blog" className="hover:text-beamray-blue transition-colors" onClick={() => setIsOpen(false)}>Blog</Link>
               <Link href="/contact" className="hover:text-beamray-blue transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
             </div>
           </div>

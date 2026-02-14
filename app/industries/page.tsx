@@ -90,7 +90,7 @@ export default function Services() {
                   </div>
                   {index === 0 && (
                     <Image 
-                      src="/pest-control-ants.png" 
+                      src="/images/pest-control-ants.png" 
                       alt="Pest Control Ants"
                       width={80}
                       height={80}
