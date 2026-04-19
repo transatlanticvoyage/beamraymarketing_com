@@ -29,6 +29,11 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/fb",
+      "destination": "https://www.facebook.com/profile.php?id=61588510623817",
+      "permanent": true
     }
   ]
 }
