@@ -15,13 +15,15 @@ export default function Home() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 pt-16">
+      <main id="main-content" role="main">
+      <section className="min-h-screen flex items-center justify-center px-4 pt-16" aria-labelledby="hero-heading">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-black mb-6"
+            id="hero-heading"
           >
             Generate <span className="gradient-text">Qualified Leads</span>
             <br />for Your Local Business
@@ -43,11 +45,11 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link href="/contact" className="btn-primary inline-flex items-center gap-2">
-              Get Started <ArrowRight />
+            <Link href="/contact" className="btn-primary inline-flex items-center gap-2" aria-label="Get started with lead generation services">
+              Get Started <ArrowRight aria-hidden="true" />
             </Link>
-            <Link href="/services" className="btn-secondary">
-              Learn More
+            <Link href="/services" className="btn-secondary" aria-label="Learn more about our services">
+              Learn More About Services
             </Link>
           </motion.div>
         </div>
@@ -60,9 +62,9 @@ export default function Home() {
       <YouTubeVideo />
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4" aria-labelledby="features-heading">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
+          <h2 id="features-heading" className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
             Why Choose BeamRay Marketing?
           </h2>
           
@@ -81,8 +83,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="glass-effect p-8 rounded-xl hover:scale-105 transition-transform"
+                role="article"
               >
-                <div className="text-beamray-blue mb-4">{feature.icon}</div>
+                <div className="text-beamray-blue mb-4" aria-hidden="true">{feature.icon}</div>
                 <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.desc}</p>
               </motion.div>
@@ -95,17 +98,18 @@ export default function Home() {
       <KyleCampbellSection />
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4" aria-labelledby="cta-heading">
         <div className="max-w-4xl mx-auto text-center glass-effect rounded-2xl p-12">
-          <h2 className="text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
+          <h2 id="cta-heading" className="text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Join hundreds of successful businesses that trust BeamRay Marketing
           </p>
-          <Link href="/contact" className="btn-primary text-lg inline-flex items-center gap-2">
-            Start Your Campaign <ArrowRight />
+          <Link href="/contact" className="btn-primary text-lg inline-flex items-center gap-2" aria-label="Start your marketing campaign today">
+            Start Your Campaign <ArrowRight aria-hidden="true" />
           </Link>
         </div>
       </section>
+      </main>
     </>
   )
 }

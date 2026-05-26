@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Screen reader only utility class */
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -21,11 +47,20 @@
     @apply backdrop-blur-lg bg-white/10 border border-white/20;
   }
   
+  /* Focus indicators for better keyboard navigation */
+  *:focus {
+    @apply outline-none;
+  }
+  
+  *:focus-visible {
+    @apply ring-2 ring-beamray-blue ring-offset-2 ring-offset-slate-900;
+  }
+  
   .btn-primary {
-    @apply px-8 py-4 bg-gradient-to-r from-beamray-blue to-beamray-green text-white rounded-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300;
+    @apply px-8 py-4 bg-gradient-to-r from-beamray-blue to-beamray-green text-white rounded-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-beamray-green focus:ring-offset-2 focus:ring-offset-slate-900;
   }
   
   .btn-secondary {
-    @apply px-8 py-4 border-2 border-beamray-blue text-beamray-blue rounded-lg font-semibold hover:bg-beamray-blue hover:text-white transition-all duration-300;
+    @apply px-8 py-4 border-2 border-beamray-blue text-beamray-blue rounded-lg font-semibold hover:bg-beamray-blue hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900;
   }
 }

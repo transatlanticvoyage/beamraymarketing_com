@@ -23,7 +23,7 @@ export default function About() {
               About BeamRay Marketing
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Your trusted partner in local business growth since 2020. We specialize in 
+              Your trusted and experienced partner in local business growth since 2020. We specialize in 
               creating powerful lead generation systems that deliver real results.
             </p>
           </motion.div>

@@ -13,11 +13,22 @@ export default function Contact() {
     service: '',
     message: ''
   })
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! We will get back to you soon.')
+    setSubmitStatus('loading')
+    
+    // Simulate form submission
+    setTimeout(() => {
+      console.log('Form submitted:', formData)
+      setSubmitStatus('success')
+      // Reset form after successful submission
+      setTimeout(() => {
+        setFormData({ name: '', email: '', phone: '', service: '', message: '' })
+        setSubmitStatus('idle')
+      }, 3000)
+    }, 1000)
   }
 
   return (
@@ -51,45 +62,76 @@ export default function Contact() {
               className="glass-effect rounded-xl p-8"
             >
               <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              
+              {/* Status Messages */}
+              <div role="status" aria-live="polite" aria-atomic="true" className="sr-only">
+                {submitStatus === 'loading' && 'Submitting your form...'}
+                {submitStatus === 'success' && 'Your message has been sent successfully!'}
+                {submitStatus === 'error' && 'There was an error sending your message. Please try again.'}
+              </div>
+              
+              {submitStatus === 'success' && (
+                <div className="bg-green-500/20 border border-green-500 text-green-300 px-4 py-3 rounded-lg mb-6" role="alert">
+                  <p className="font-medium">Thank you for your message!</p>
+                  <p className="text-sm">We'll get back to you within 24 hours.</p>
+                </div>
+              )}
+              
+              <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">Name *</label>
                   <input
+                    id="name"
+                    name="name"
                     type="text"
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none transition-colors"
+                    aria-required="true"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    disabled={submitStatus === 'loading'}
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">Email *</label>
                   <input
+                    id="email"
+                    name="email"
                     type="email"
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none transition-colors"
+                    aria-required="true"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    disabled={submitStatus === 'loading'}
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Phone</label>
+                  <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone (Optional)</label>
                   <input
+                    id="phone"
+                    name="phone"
                     type="tel"
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none transition-colors"
+                    aria-describedby="phone-format"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    disabled={submitStatus === 'loading'}
                   />
+                  <span id="phone-format" className="text-xs text-gray-400 mt-1">Format: (555) 123-4567</span>
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Service Interested In</label>
+                  <label htmlFor="service" className="block text-sm font-medium mb-2">Service Interested In</label>
                   <select
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none transition-colors"
+                    id="service"
+                    name="service"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors"
                     value={formData.service}
                     onChange={(e) => setFormData({...formData, service: e.target.value})}
+                    disabled={submitStatus === 'loading'}
                   >
                     <option value="">Select a service</option>
                     <option value="pest-control">Pest Control</option>
@@ -103,17 +145,36 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
                   <textarea
+                    id="message"
+                    name="message"
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none transition-colors resize-none"
+                    aria-describedby="message-hint"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors resize-none"
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    disabled={submitStatus === 'loading'}
                   ></textarea>
+                  <span id="message-hint" className="text-xs text-gray-400 mt-1">Tell us about your project and goals</span>
                 </div>
                 
-                <button type="submit" className="btn-primary w-full flex items-center justify-center gap-2">
-                  Send Message <Send size={20} />
+                <button 
+                  type="submit" 
+                  className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={submitStatus === 'loading'}
+                  aria-busy={submitStatus === 'loading'}
+                >
+                  {submitStatus === 'loading' ? (
+                    <>
+                      <span className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full" aria-hidden="true"></span>
+                      <span>Sending...</span>
+                    </>
+                  ) : (
+                    <>
+                      Send Message <Send size={20} aria-hidden="true" />
+                    </>
+                  )}
                 </button>
               </form>
             </motion.div>
@@ -129,7 +190,7 @@ export default function Contact() {
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
-                    <Mail className="text-beamray-blue mt-1" />
+                    <Mail className="text-beamray-blue mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-medium">Email</p>
                       <p className="text-gray-300">info@beamraymarketing.com</p>
@@ -137,7 +198,7 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start gap-4">
-                    <Phone className="text-beamray-blue mt-1" />
+                    <Phone className="text-beamray-blue mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-medium">Phone</p>
                       <p className="text-gray-300">(555) 123-4567</p>
@@ -145,7 +206,7 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start gap-4">
-                    <MapPin className="text-beamray-blue mt-1" />
+                    <MapPin className="text-beamray-blue mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-medium">Location</p>
                       <p className="text-gray-300">Serving businesses nationwide</p>
@@ -153,7 +214,7 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start gap-4">
-                    <Clock className="text-beamray-blue mt-1" />
+                    <Clock className="text-beamray-blue mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-medium">Business Hours</p>
                       <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
@@ -170,7 +231,7 @@ export default function Contact() {
                   please call us directly.
                 </p>
                 <div className="flex items-center gap-2 text-beamray-green">
-                  <div className="w-2 h-2 bg-beamray-green rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-beamray-green rounded-full animate-pulse" aria-hidden="true"></div>
                   <span className="text-sm">Available Now</span>
                 </div>
               </div>
@@ -184,9 +245,10 @@ export default function Contact() {
                   href="https://www.facebook.com/kylecampbell123/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-beamray-blue hover:text-beamray-green transition-colors"
+                  className="inline-flex items-center gap-2 text-beamray-blue hover:text-beamray-green transition-colors focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1"
+                  aria-label="Visit Kyle Campbell's Facebook Profile (opens in new tab)"
                 >
-                  Facebook Profile →
+                  Facebook Profile <span aria-hidden="true">→</span>
                 </a>
               </div>
             </motion.div>
