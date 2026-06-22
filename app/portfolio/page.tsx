@@ -90,7 +90,7 @@ export default function Portfolio() {
             <h1 className="text-5xl md:text-6xl font-black mb-6 gradient-text">
               Success Stories
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Real results from real businesses. See how we've helped home service 
               companies transform their lead generation and grow their revenue.
             </p>
@@ -106,15 +106,15 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="text-4xl font-bold text-beamray-green mb-2">$3.2M+</div>
-                <p className="text-gray-300">Revenue Generated for Clients</p>
+                <p className="text-slate-600">Revenue Generated for Clients</p>
               </div>
               <div>
                 <div className="text-4xl font-bold text-beamray-blue mb-2">10,000+</div>
-                <p className="text-gray-300">Qualified Leads Delivered</p>
+                <p className="text-slate-600">Qualified Leads Delivered</p>
               </div>
               <div>
                 <div className="text-4xl font-bold text-beamray-purple mb-2">12:1</div>
-                <p className="text-gray-300">Average ROI</p>
+                <p className="text-slate-600">Average ROI</p>
               </div>
             </div>
           </motion.div>
@@ -132,7 +132,7 @@ export default function Portfolio() {
                 <div className={`h-2 bg-gradient-to-r ${study.gradient}`}></div>
                 <div className="p-8">
                   <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
-                  <p className="text-sm text-gray-400 mb-4">{study.industry}</p>
+                  <p className="text-sm text-slate-500 mb-4">{study.industry}</p>
                   
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div>
@@ -140,19 +140,19 @@ export default function Portfolio() {
                         <TrendingUp size={16} />
                         {study.results.leads}
                       </div>
-                      <p className="text-xs text-gray-400">Leads</p>
+                      <p className="text-xs text-slate-500">Leads</p>
                     </div>
                     <div>
                       <div className="text-beamray-blue font-bold">{study.results.revenue}</div>
-                      <p className="text-xs text-gray-400">Revenue</p>
+                      <p className="text-xs text-slate-500">Revenue</p>
                     </div>
                     <div>
                       <div className="text-beamray-purple font-bold">{study.results.roi}</div>
-                      <p className="text-xs text-gray-400">ROI</p>
+                      <p className="text-xs text-slate-500">ROI</p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 text-sm mb-4">{study.description}</p>
+                  <p className="text-slate-600 text-sm mb-4">{study.description}</p>
                   
                   <button className="text-beamray-blue hover:text-beamray-green transition-colors text-sm font-medium inline-flex items-center gap-1">
                     View Case Study <ExternalLink size={14} />
@@ -170,13 +170,13 @@ export default function Portfolio() {
             className="glass-effect rounded-2xl p-12 mb-16 text-center"
           >
             <div className="text-6xl text-beamray-green mb-6">"</div>
-            <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 mb-6 max-w-3xl mx-auto">
               BeamRay Marketing completely transformed our business. We went from struggling 
               to find customers to having more leads than we can handle. The ROI has been 
               incredible, and Kyle's team truly understands our industry.
             </p>
             <p className="font-bold">John Smith</p>
-            <p className="text-sm text-gray-400">CEO, Elite Pest Control</p>
+            <p className="text-sm text-slate-500">CEO, Elite Pest Control</p>
           </motion.div>
 
           {/* CTA */}

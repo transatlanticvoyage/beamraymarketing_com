@@ -54,14 +54,14 @@ export default function KyleCampbellSection() {
                 Founder & Lead Marketing Strategist
               </div>
 
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+              <p className="text-slate-600 mb-6 text-lg leading-relaxed">
                 With over a decade of experience in digital marketing and lead generation, 
                 Kyle has transformed hundreds of local businesses into market leaders. 
                 His data-driven approach and deep understanding of local SEO has generated 
                 millions in revenue for clients across the United States.
               </p>
 
-              <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+              <p className="text-slate-600 mb-8 text-lg leading-relaxed">
                 Specializing in home service industries, Kyle pioneered the "Rainstorm" 
                 method that consistently delivers top 3 Google Maps rankings. His 
                 "Free Until You Rank" guarantee has revolutionized how small businesses 
@@ -74,22 +74,22 @@ export default function KyleCampbellSection() {
                   <div className="flex justify-center mb-2">
                     <Award className="text-yellow-500" size={30} />
                   </div>
-                  <div className="text-2xl font-bold text-white">500+</div>
-                  <div className="text-xs text-gray-400">Campaigns Delivered</div>
+                  <div className="text-2xl font-bold text-slate-900">500+</div>
+                  <div className="text-xs text-slate-500">Campaigns Delivered</div>
                 </div>
                 <div className="text-center">
                   <div className="flex justify-center mb-2">
                     <TrendingUp className="text-green-500" size={30} />
                   </div>
-                  <div className="text-2xl font-bold text-white">87%</div>
-                  <div className="text-xs text-gray-400">Avg Lead Increase</div>
+                  <div className="text-2xl font-bold text-slate-900">87%</div>
+                  <div className="text-xs text-slate-500">Avg Lead Increase</div>
                 </div>
                 <div className="text-center">
                   <div className="flex justify-center mb-2">
                     <Users className="text-blue-500" size={30} />
                   </div>
-                  <div className="text-2xl font-bold text-white">200+</div>
-                  <div className="text-xs text-gray-400">Happy Clients</div>
+                  <div className="text-2xl font-bold text-slate-900">200+</div>
+                  <div className="text-xs text-slate-500">Happy Clients</div>
                 </div>
               </div>
 
@@ -99,14 +99,14 @@ export default function KyleCampbellSection() {
                   href="https://www.facebook.com/kylecampbell123/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600/20 hover:bg-blue-600/30 rounded-lg transition-colors text-blue-400"
+                  className="flex items-center gap-2 px-4 py-2 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors text-blue-600"
                 >
                   <Facebook size={20} />
                   <span>Connect on Facebook</span>
                 </a>
                 <a 
                   href="mailto:kyle@beamraymarketing.com"
-                  className="flex items-center gap-2 px-4 py-2 bg-green-600/20 hover:bg-green-600/30 rounded-lg transition-colors text-green-400"
+                  className="flex items-center gap-2 px-4 py-2 bg-green-50 hover:bg-green-100 rounded-lg transition-colors text-green-600"
                 >
                   <Mail size={20} />
                   <span>Email Kyle</span>
@@ -115,7 +115,7 @@ export default function KyleCampbellSection() {
 
               {/* Quote */}
               <div className="mt-8 p-4 bg-gradient-to-r from-beamray-blue/10 to-beamray-green/10 rounded-xl border-l-4 border-beamray-blue">
-                <p className="text-gray-300 italic">
+                <p className="text-slate-600 italic">
                   "Your success is my success. I don't just deliver leads – I deliver 
                   partnerships that transform businesses."
                 </p>

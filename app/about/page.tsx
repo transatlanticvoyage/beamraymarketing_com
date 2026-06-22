@@ -22,7 +22,7 @@ export default function About() {
             <h1 className="text-5xl md:text-6xl font-black mb-6 gradient-text">
               About BeamRay Marketing
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Your trusted and experienced partner in local business growth since 2020. We specialize in 
               creating powerful lead generation systems that deliver real results.
             </p>
@@ -38,13 +38,13 @@ export default function About() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-4">Meet Kyle Campbell</h2>
-                <p className="text-gray-300 mb-4">
+                <p className="text-slate-600 mb-4">
                   Founder & Lead Marketing Strategist with over 10 years of experience 
                   in digital marketing and lead generation. Kyle has helped hundreds of 
                   local businesses transform their online presence and generate consistent, 
                   high-quality leads.
                 </p>
-                <p className="text-gray-300 mb-4">
+                <p className="text-slate-600 mb-4">
                   Specializing in home service industries, Kyle understands the unique 
                   challenges and opportunities that local businesses face in today's 
                   digital landscape.
@@ -61,7 +61,7 @@ export default function About() {
               <div className="relative h-96 rounded-xl overflow-hidden bg-gradient-to-br from-beamray-blue/20 to-beamray-purple/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-32 h-32 rounded-full bg-gradient-to-r from-beamray-blue to-beamray-green mx-auto mb-4"></div>
-                  <p className="text-gray-400">Kyle Campbell</p>
+                  <p className="text-slate-500">Kyle Campbell</p>
                   <p className="text-sm text-gray-500">Founder & CEO</p>
                 </div>
               </div>
@@ -85,7 +85,7 @@ export default function About() {
               >
                 <div className="text-beamray-green mb-3 flex justify-center">{stat.icon}</div>
                 <div className="text-3xl font-bold mb-1">{stat.value}</div>
-                <div className="text-gray-400 text-sm">{stat.label}</div>
+                <div className="text-slate-500 text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -98,7 +98,7 @@ export default function About() {
             className="text-center py-16"
           >
             <h2 className="text-4xl font-bold mb-6 gradient-text">Our Mission</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               To empower local businesses with cutting-edge digital marketing strategies 
               that drive growth, increase revenue, and build lasting customer relationships. 
               We believe every business deserves access to professional marketing that delivers results.

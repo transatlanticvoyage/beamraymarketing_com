@@ -68,7 +68,7 @@ export default function Services() {
             <h1 className="text-5xl md:text-6xl font-black mb-6 gradient-text">
               Our Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Comprehensive lead generation solutions tailored for home service businesses. 
               We understand your industry and deliver results that matter.
             </p>
@@ -99,10 +99,10 @@ export default function Services() {
                   )}
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                <p className="text-slate-600 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm text-gray-400">
+                    <li key={idx} className="flex items-center gap-2 text-sm text-slate-500">
                       <ChevronRight size={16} className="text-beamray-green" />
                       {feature}
                     </li>
@@ -130,7 +130,7 @@ export default function Services() {
                 <div key={index} className="text-center">
                   <div className="text-4xl font-bold text-beamray-green mb-2">{item.step}</div>
                   <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-400">{item.desc}</p>
+                  <p className="text-sm text-slate-500">{item.desc}</p>
                 </div>
               ))}
             </div>

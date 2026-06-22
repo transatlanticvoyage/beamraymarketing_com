@@ -47,7 +47,7 @@ export default function Contact() {
             <h1 className="text-5xl md:text-6xl font-black mb-6 gradient-text">
               Get In Touch
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Ready to transform your business? Let's discuss how we can help you 
               generate more leads and grow your revenue.
             </p>
@@ -71,7 +71,7 @@ export default function Contact() {
               </div>
               
               {submitStatus === 'success' && (
-                <div className="bg-green-500/20 border border-green-500 text-green-300 px-4 py-3 rounded-lg mb-6" role="alert">
+                <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-6" role="alert">
                   <p className="font-medium">Thank you for your message!</p>
                   <p className="text-sm">We'll get back to you within 24 hours.</p>
                 </div>
@@ -86,7 +86,7 @@ export default function Contact() {
                     type="text"
                     required
                     aria-required="true"
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white border border-slate-300 text-slate-900 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-white transition-colors"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                     disabled={submitStatus === 'loading'}
@@ -101,7 +101,7 @@ export default function Contact() {
                     type="email"
                     required
                     aria-required="true"
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white border border-slate-300 text-slate-900 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-white transition-colors"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     disabled={submitStatus === 'loading'}
@@ -115,12 +115,12 @@ export default function Contact() {
                     name="phone"
                     type="tel"
                     aria-describedby="phone-format"
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white border border-slate-300 text-slate-900 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-white transition-colors"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     disabled={submitStatus === 'loading'}
                   />
-                  <span id="phone-format" className="text-xs text-gray-400 mt-1">Format: (555) 123-4567</span>
+                  <span id="phone-format" className="text-xs text-slate-500 mt-1">Format: (555) 123-4567</span>
                 </div>
                 
                 <div>
@@ -128,7 +128,7 @@ export default function Contact() {
                   <select
                     id="service"
                     name="service"
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white border border-slate-300 text-slate-900 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-white transition-colors"
                     value={formData.service}
                     onChange={(e) => setFormData({...formData, service: e.target.value})}
                     disabled={submitStatus === 'loading'}
@@ -151,12 +151,12 @@ export default function Contact() {
                     name="message"
                     rows={4}
                     aria-describedby="message-hint"
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-lg bg-white border border-slate-300 text-slate-900 focus:border-beamray-blue focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-white transition-colors resize-none"
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     disabled={submitStatus === 'loading'}
                   ></textarea>
-                  <span id="message-hint" className="text-xs text-gray-400 mt-1">Tell us about your project and goals</span>
+                  <span id="message-hint" className="text-xs text-slate-500 mt-1">Tell us about your project and goals</span>
                 </div>
                 
                 <button 
@@ -193,7 +193,7 @@ export default function Contact() {
                     <Mail className="text-beamray-blue mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-gray-300">info@beamraymarketing.com</p>
+                      <p className="text-slate-600">info@beamraymarketing.com</p>
                     </div>
                   </div>
                   
@@ -201,7 +201,7 @@ export default function Contact() {
                     <Phone className="text-beamray-blue mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-medium">Phone</p>
-                      <p className="text-gray-300">(555) 123-4567</p>
+                      <p className="text-slate-600">(555) 123-4567</p>
                     </div>
                   </div>
                   
@@ -209,7 +209,7 @@ export default function Contact() {
                     <MapPin className="text-beamray-blue mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-medium">Location</p>
-                      <p className="text-gray-300">Serving businesses nationwide</p>
+                      <p className="text-slate-600">Serving businesses nationwide</p>
                     </div>
                   </div>
                   
@@ -217,8 +217,8 @@ export default function Contact() {
                     <Clock className="text-beamray-blue mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-medium">Business Hours</p>
-                      <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
-                      <p className="text-gray-300">Saturday - Sunday: By appointment</p>
+                      <p className="text-slate-600">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                      <p className="text-slate-600">Saturday - Sunday: By appointment</p>
                     </div>
                   </div>
                 </div>
@@ -226,7 +226,7 @@ export default function Contact() {
 
               <div className="glass-effect rounded-xl p-8">
                 <h3 className="text-xl font-bold mb-4">Quick Response Guarantee</h3>
-                <p className="text-gray-300 mb-4">
+                <p className="text-slate-600 mb-4">
                   We respond to all inquiries within 24 hours. For urgent matters, 
                   please call us directly.
                 </p>
@@ -238,14 +238,14 @@ export default function Contact() {
 
               <div className="glass-effect rounded-xl p-8">
                 <h3 className="text-xl font-bold mb-4">Connect With Kyle</h3>
-                <p className="text-gray-300 mb-4">
+                <p className="text-slate-600 mb-4">
                   Follow us on social media for marketing tips and industry insights.
                 </p>
                 <a 
                   href="https://www.facebook.com/kylecampbell123/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-beamray-blue hover:text-beamray-green transition-colors focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1"
+                  className="inline-flex items-center gap-2 text-beamray-blue hover:text-beamray-green transition-colors focus:outline-none focus:ring-2 focus:ring-beamray-blue focus:ring-offset-2 focus:ring-offset-white rounded px-2 py-1"
                   aria-label="Visit Kyle Campbell's Facebook Profile (opens in new tab)"
                 >
                   Facebook Profile <span aria-hidden="true">→</span>

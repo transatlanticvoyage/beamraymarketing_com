@@ -288,7 +288,7 @@ export default function KeywordDataTabs() {
           className="glass-effect rounded-2xl p-6 h-[400px] flex flex-col"
         >
           {/* Tab Headers */}
-          <div className="flex flex-wrap gap-2 mb-6 border-b border-white/20 pb-4">
+          <div className="flex flex-wrap gap-2 mb-6 border-b border-slate-200 pb-4">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -296,7 +296,7 @@ export default function KeywordDataTabs() {
                 className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === tab.id
                     ? 'bg-gradient-to-r from-beamray-blue to-beamray-green text-white shadow-lg'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
                 {tab.label}
@@ -315,16 +315,16 @@ export default function KeywordDataTabs() {
                 transition={{ duration: 0.3 }}
               >
                 <table className="w-full text-sm">
-                  <thead className="sticky top-0 bg-slate-900/80 backdrop-blur-sm">
-                    <tr className="text-left border-b border-white/20">
-                      <th className="px-4 py-2 text-gray-300 font-semibold">Keyword</th>
-                      <th className="px-4 py-2 text-gray-300 font-semibold">Volume</th>
-                      <th className="px-4 py-2 text-gray-300 font-semibold">CPC</th>
-                      <th className="px-4 py-2 text-gray-300 font-semibold">Competition</th>
-                      <th className="px-4 py-2 text-gray-300 font-semibold hidden md:table-cell">Index</th>
-                      <th className="px-4 py-2 text-gray-300 font-semibold hidden lg:table-cell">City</th>
-                      <th className="px-4 py-2 text-gray-300 font-semibold hidden lg:table-cell">State</th>
-                      <th className="px-4 py-2 text-gray-300 font-semibold hidden xl:table-cell">Population</th>
+                  <thead className="sticky top-0 bg-white">
+                    <tr className="text-left border-b border-slate-200">
+                      <th className="px-4 py-2 text-slate-600 font-semibold">Keyword</th>
+                      <th className="px-4 py-2 text-slate-600 font-semibold">Volume</th>
+                      <th className="px-4 py-2 text-slate-600 font-semibold">CPC</th>
+                      <th className="px-4 py-2 text-slate-600 font-semibold">Competition</th>
+                      <th className="px-4 py-2 text-slate-600 font-semibold hidden md:table-cell">Index</th>
+                      <th className="px-4 py-2 text-slate-600 font-semibold hidden lg:table-cell">City</th>
+                      <th className="px-4 py-2 text-slate-600 font-semibold hidden lg:table-cell">State</th>
+                      <th className="px-4 py-2 text-slate-600 font-semibold hidden xl:table-cell">Population</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -334,10 +334,10 @@ export default function KeywordDataTabs() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.05 }}
-                        className="border-b border-white/10 hover:bg-white/5 transition-colors"
+                        className="border-b border-slate-100 hover:bg-slate-50 transition-colors"
                       >
-                        <td className="px-4 py-3 text-white font-medium">{data.keyword_text}</td>
-                        <td className="px-4 py-3 text-gray-300">{data.volume.toLocaleString()}/mo</td>
+                        <td className="px-4 py-3 text-slate-900 font-medium">{data.keyword_text}</td>
+                        <td className="px-4 py-3 text-slate-600">{data.volume.toLocaleString()}/mo</td>
                         <td className="px-4 py-3 text-beamray-green font-semibold">${data.cpc.toFixed(2)}</td>
                         <td className="px-4 py-3">
                           <span className={`px-2 py-1 rounded text-xs font-medium ${
@@ -348,10 +348,10 @@ export default function KeywordDataTabs() {
                             {data.competition}
                           </span>
                         </td>
-                        <td className="px-4 py-3 text-gray-300 hidden md:table-cell">{data.competition_index}</td>
-                        <td className="px-4 py-3 text-gray-300 hidden lg:table-cell">{data.city_name}</td>
-                        <td className="px-4 py-3 text-gray-300 hidden lg:table-cell">{data.state_code}</td>
-                        <td className="px-4 py-3 text-gray-300 hidden xl:table-cell">
+                        <td className="px-4 py-3 text-slate-600 hidden md:table-cell">{data.competition_index}</td>
+                        <td className="px-4 py-3 text-slate-600 hidden lg:table-cell">{data.city_name}</td>
+                        <td className="px-4 py-3 text-slate-600 hidden lg:table-cell">{data.state_code}</td>
+                        <td className="px-4 py-3 text-slate-600 hidden xl:table-cell">
                           {data.city_population.toLocaleString()}
                         </td>
                       </motion.tr>
@@ -363,8 +363,8 @@ export default function KeywordDataTabs() {
           </div>
 
           {/* Footer Note */}
-          <div className="mt-4 pt-4 border-t border-white/20">
-            <p className="text-xs text-gray-400 text-center">
+          <div className="mt-4 pt-4 border-t border-slate-200">
+            <p className="text-xs text-slate-500 text-center">
               *Data shown represents typical market conditions. Actual costs and competition may vary.
             </p>
           </div>

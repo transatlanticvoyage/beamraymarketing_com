@@ -96,7 +96,7 @@ export default function Blog() {
             <h1 className="text-5xl md:text-6xl font-black mb-6 gradient-text">
               BeamRay Marketing Blog
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Proven strategies, industry insights, and actionable tips to help local service businesses 
               dominate their markets and generate more qualified leads.
             </p>
@@ -117,7 +117,7 @@ export default function Blog() {
                     Featured Post
                   </span>
                 )}
-                <span className="px-3 py-1 bg-white/10 text-gray-400 text-sm rounded-full">
+                <span className="px-3 py-1 bg-slate-100 text-slate-500 text-sm rounded-full">
                   {post.category}
                 </span>
               </div>
@@ -128,12 +128,12 @@ export default function Blog() {
                 </Link>
               </h2>
               
-              <p className="text-lg text-gray-300 mb-6">
+              <p className="text-lg text-slate-600 mb-6">
                 {post.excerpt}
               </p>
               
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+                <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500">
                   <div className="flex items-center gap-2">
                     <User size={16} />
                     <span>{post.author}</span>
@@ -184,7 +184,7 @@ export default function Blog() {
                     {category.icon}
                   </div>
                   <h3 className="font-semibold mb-1">{category.name}</h3>
-                  <p className="text-sm text-gray-400">{category.count} {category.count === 1 ? 'Post' : 'Posts'}</p>
+                  <p className="text-sm text-slate-500">{category.count} {category.count === 1 ? 'Post' : 'Posts'}</p>
                 </motion.div>
               ))}
             </div>
@@ -198,7 +198,7 @@ export default function Blog() {
             className="glass-effect rounded-2xl p-8 text-center"
           >
             <h2 className="text-3xl font-bold mb-4">Stay Ahead of Your Competition</h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
               Get weekly insights on local marketing strategies, Google updates, and proven tactics 
               to generate more leads for your business.
             </p>

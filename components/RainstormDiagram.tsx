@@ -87,8 +87,8 @@ export default function RainstormDiagram() {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 
-    // Clear canvas with dark background
-    ctx.fillStyle = '#0f172a';
+    // Clear canvas with light background
+    ctx.fillStyle = '#f8fafc';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Draw grid
@@ -214,7 +214,7 @@ export default function RainstormDiagram() {
       }
 
       // Node label
-      ctx.fillStyle = '#e2e8f0';
+      ctx.fillStyle = '#1e293b';
       ctx.font = '12px sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText(node.label, node.x, node.y + nodeRadius + 15);
@@ -223,7 +223,7 @@ export default function RainstormDiagram() {
   }, [nodes, edges, animationFrame]);
 
   return (
-    <div className="w-full bg-slate-900 rounded-xl p-4">
+    <div className="w-full bg-white border border-slate-200 rounded-xl p-4">
       <canvas
         ref={canvasRef}
         className="w-full h-[400px] rounded-lg"

@@ -14,7 +14,7 @@ export default function BookCall() {
         strategy="afterInteractive" 
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900">
+      <div className="min-h-screen bg-slate-50">
         {/* Minimal Header - No Navigation */}
         <header className="py-4 px-4">
           <div className="max-w-4xl mx-auto">
@@ -32,7 +32,7 @@ export default function BookCall() {
               transition={{ duration: 0.8 }}
               className="text-center mb-8"
             >
-              <h1 className="text-4xl md:text-5xl font-black mb-4 text-white">
+              <h1 className="text-4xl md:text-5xl font-black mb-4 text-slate-900">
                 See Why Competitors Outrank You on Google
               </h1>
               <p className="text-xl md:text-2xl text-beamray-green font-semibold">
@@ -45,7 +45,7 @@ export default function BookCall() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-8 mb-8 text-gray-300"
+              className="flex flex-wrap justify-center gap-8 mb-8 text-slate-600"
             >
               <div className="flex items-center gap-2">
                 <Users className="text-beamray-blue" size={20} />
@@ -68,7 +68,7 @@ export default function BookCall() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="glass-effect rounded-xl p-6 mb-8"
             >
-              <h2 className="text-2xl font-bold mb-4 text-white">
+              <h2 className="text-2xl font-bold mb-4 text-slate-900">
                 In This Quick Call, You'll Discover:
               </h2>
               <ul className="space-y-3">
@@ -80,7 +80,7 @@ export default function BookCall() {
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="text-green-500 flex-shrink-0 mt-1" size={20} />
-                    <span className="text-gray-300">{item}</span>
+                    <span className="text-slate-600">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -109,10 +109,10 @@ export default function BookCall() {
               className="text-center mb-8"
             >
               <div className="glass-effect rounded-xl p-6 inline-block">
-                <p className="text-gray-300 mb-2">
-                  <strong className="text-white">Who This Call Is For:</strong>
+                <p className="text-slate-600 mb-2">
+                  <strong className="text-slate-900">Who This Call Is For:</strong>
                 </p>
-                <p className="text-gray-400 text-sm max-w-2xl">
+                <p className="text-slate-500 text-sm max-w-2xl">
                   This call is for established local service businesses (pest control, plumbing, HVAC, restoration, contractors) 
                   looking to increase inbound calls from Google. Not suitable for DIY marketers or brand new startups.
                 </p>
@@ -126,7 +126,7 @@ export default function BookCall() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-center"
             >
-              <p className="text-gray-400 mb-4">Trusted by local service businesses nationwide</p>
+              <p className="text-slate-500 mb-4">Trusted by local service businesses nationwide</p>
               <div className="flex flex-wrap justify-center gap-4">
                 {['⭐⭐⭐⭐⭐', '⭐⭐⭐⭐⭐', '⭐⭐⭐⭐⭐', '⭐⭐⭐⭐⭐'].map((stars, index) => (
                   <div key={index} className="glass-effect rounded-lg px-4 py-2">
@@ -140,7 +140,7 @@ export default function BookCall() {
         </main>
 
         {/* Minimal Footer */}
-        <footer className="py-8 px-4 border-t border-white/10">
+        <footer className="py-8 px-4 border-t border-slate-200">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gray-500 text-sm">
               © 2024 BeamRay Marketing • Results-Driven Lead Generation
