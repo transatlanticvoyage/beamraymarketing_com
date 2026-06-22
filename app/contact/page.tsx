@@ -134,13 +134,9 @@ export default function Contact() {
                     disabled={submitStatus === 'loading'}
                   >
                     <option value="">Select a service</option>
-                    <option value="pest-control">Pest Control</option>
-                    <option value="water-damage">Water Damage Restoration</option>
-                    <option value="electrical">Electrical Services</option>
-                    <option value="mold-removal">Mold Removal</option>
-                    <option value="plumbing">Plumbing Services</option>
-                    <option value="general">General Contractors</option>
-                    <option value="other">Other</option>
+                    <option value="seo">SEO</option>
+                    <option value="website-design">Website Design</option>
+                    <option value="paid-ads">Paid Ads</option>
                   </select>
                 </div>
                 
