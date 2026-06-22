@@ -3,7 +3,6 @@
 
 import Navigation from '@/components/Navigation'
 import KeywordDataTabs from '@/components/KeywordDataTabs'
-import YouTubeVideo from '@/components/YouTubeVideo'
 import KyleCampbellSection from '@/components/KyleCampbellSection'
 import Link from 'next/link'
 import { ArrowRight, TrendingUp, Users, Target, Zap, CheckCircle, Star } from 'lucide-react'
@@ -33,7 +32,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto"
           >
             Specializing in lead generation for home service businesses including pest control, 
             water damage restoration, mold removal, electrical services, and more.
@@ -57,9 +56,6 @@ export default function Home() {
 
       {/* Keyword Data Tables */}
       <KeywordDataTabs />
-
-      {/* YouTube Video */}
-      <YouTubeVideo />
 
       {/* Features Section */}
       <section className="py-20 px-4" aria-labelledby="features-heading">
@@ -87,7 +83,7 @@ export default function Home() {
               >
                 <div className="text-beamray-blue mb-4" aria-hidden="true">{feature.icon}</div>
                 <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.desc}</p>
+                <p className="text-slate-600">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -101,7 +97,7 @@ export default function Home() {
       <section className="py-20 px-4" aria-labelledby="cta-heading">
         <div className="max-w-4xl mx-auto text-center glass-effect rounded-2xl p-12">
           <h2 id="cta-heading" className="text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-slate-600 mb-8">
             Join hundreds of successful businesses that trust BeamRay Marketing
           </p>
           <Link href="/contact" className="btn-primary text-lg inline-flex items-center gap-2" aria-label="Start your marketing campaign today">
