@@ -82,6 +82,7 @@ export default function Navigation() {
                   <div
                     onMouseEnter={() => setOpenDropdown(item.label)}
                     onMouseLeave={() => setOpenDropdown(null)}
+                    className="pb-1"
                   >
                     {item.href ? (
                       <Link
