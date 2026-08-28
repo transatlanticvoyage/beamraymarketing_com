@@ -90,7 +90,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Pricing Section — HIDDEN. Wrapped in `false &&` so it does not render
+          on the live site. Change `false` to `true` to bring it back. */}
+      {false && (
       <section className="py-20 px-4 bg-white" aria-labelledby="pricing-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -207,6 +209,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Kyle Campbell Section */}
       <KyleCampbellSection />
