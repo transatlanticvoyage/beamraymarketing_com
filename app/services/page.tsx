@@ -102,9 +102,6 @@ export default function Services() {
                 <Link href="/contact" className="btn-primary inline-flex items-center justify-center gap-2" aria-label="Get started with the Rainstorm lead generation package">
                   Get Started with Rainstorm <ArrowRight aria-hidden="true" />
                 </Link>
-                <Link href="/portfolio" className="px-6 py-3 border-2 border-blue-500 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-all inline-flex items-center justify-center" aria-label="View our case studies and success stories">
-                  View Case Studies
-                </Link>
               </div>
             </div>
           </motion.div>
@@ -209,9 +206,6 @@ export default function Services() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="btn-primary inline-flex items-center justify-center gap-2" aria-label="Start with our Free Until You Rank package">
                   Start Free Until You Rank <ArrowRight aria-hidden="true" />
-                </Link>
-                <Link href="/portfolio" className="px-6 py-3 border-2 border-green-500 text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-all inline-flex items-center justify-center" aria-label="View our client success stories">
-                  See Success Stories
                 </Link>
               </div>
             </div>

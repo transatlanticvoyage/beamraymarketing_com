@@ -2,7 +2,7 @@
 
 import Navigation from '@/components/Navigation'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
+import { Mail, MapPin, Clock, Send } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Contact() {
@@ -194,14 +194,6 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start gap-4">
-                    <Phone className="text-beamray-blue mt-1" aria-hidden="true" />
-                    <div>
-                      <p className="font-medium">Phone</p>
-                      <p className="text-slate-600">(555) 123-4567</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
                     <MapPin className="text-beamray-blue mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-medium">Location</p>
@@ -217,18 +209,6 @@ export default function Contact() {
                       <p className="text-slate-600">Saturday - Sunday: By appointment</p>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div className="glass-effect rounded-xl p-8">
-                <h3 className="text-xl font-bold mb-4">Quick Response Guarantee</h3>
-                <p className="text-slate-600 mb-4">
-                  We respond to all inquiries within 24 hours. For urgent matters, 
-                  please call us directly.
-                </p>
-                <div className="flex items-center gap-2 text-beamray-green">
-                  <div className="w-2 h-2 bg-beamray-green rounded-full animate-pulse" aria-hidden="true"></div>
-                  <span className="text-sm">Available Now</span>
                 </div>
               </div>
 

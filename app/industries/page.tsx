@@ -66,11 +66,14 @@ export default function Services() {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-black mb-6 gradient-text">
-              Our Services
+              Industries Served
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Comprehensive lead generation solutions tailored for home service businesses. 
               We understand your industry and deliver results that matter.
+            </p>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto mt-4 font-medium">
+              Don&apos;t see your trade listed? We serve all home service industries.
             </p>
           </motion.div>
 

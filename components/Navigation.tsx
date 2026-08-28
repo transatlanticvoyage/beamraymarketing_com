@@ -21,7 +21,6 @@ const NAV_ITEMS: Array<{
     ],
   },
   { label: 'Industries', href: '/industries' },
-  { label: 'Portfolio', href: '/portfolio' },
   {
     label: 'Software',
     href: null,

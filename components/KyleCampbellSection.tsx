@@ -25,10 +25,10 @@ export default function KyleCampbellSection() {
               <div className="relative w-full max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-beamray-blue/20 to-beamray-green/20 rounded-2xl blur-3xl"></div>
                 <Image
-                  src="/images/kyle-with-bg.png"
+                  src="/images/kyle-office.webp"
                   alt="Kyle Campbell - Founder of BeamRay Marketing"
-                  width={500}
-                  height={600}
+                  width={1239}
+                  height={768}
                   className="relative rounded-2xl shadow-2xl w-full h-auto"
                   priority
                 />
